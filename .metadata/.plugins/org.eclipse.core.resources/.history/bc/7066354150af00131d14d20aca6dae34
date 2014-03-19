@@ -1,0 +1,10 @@
+package stavrinos.sek;
+
+public class ScoreCalculator {
+	
+	@FXML
+	public void calculate(){
+		
+	}
+
+}

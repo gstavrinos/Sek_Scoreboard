@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="213.0" prefWidth="293.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="stavrinos.sek.Calculator">
+<children><Button layoutX="116.0" layoutY="135.0" mnemonicParsing="false" text="Button" AnchorPane.bottomAnchor="53.0" AnchorPane.leftAnchor="116.0" AnchorPane.rightAnchor="115.0" AnchorPane.topAnchor="135.0" /><Label layoutX="14.464599609375" layoutY="14.0" text="Time(mmssff)" AnchorPane.bottomAnchor="184.0" AnchorPane.leftAnchor="14.464599609375" AnchorPane.rightAnchor="187.535400390625" AnchorPane.topAnchor="14.0" /><Label layoutX="14.92919921875" layoutY="67.5" text="Obstacles" AnchorPane.bottomAnchor="130.5" AnchorPane.leftAnchor="14.92919921875" AnchorPane.rightAnchor="214.07080078125" AnchorPane.topAnchor="67.5" /><TextField layoutX="116.3759765625" layoutY="9.0" AnchorPane.bottomAnchor="179.0" AnchorPane.leftAnchor="116.3759765625" AnchorPane.rightAnchor="5.6240234375" AnchorPane.topAnchor="9.0" /><TextField layoutX="116.0" layoutY="63.0" AnchorPane.bottomAnchor="125.0" AnchorPane.leftAnchor="116.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="63.0" /><TextField layoutX="116.0" layoutY="174.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="116.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="174.0" /><Label layoutX="29.393798828125" layoutY="179.0" text="Score" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="29.393798828125" AnchorPane.rightAnchor="226.606201171875" AnchorPane.topAnchor="179.0" />
+</children></AnchorPane>

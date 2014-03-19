@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="532.0" prefWidth="686.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stavrinos.sek.Controller">
+<children><ImageView fx:id="sekchallenge" cache="true" fitHeight="101.0" pickOnBounds="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+<image>
+<Image url="@../../../../../../Downloads/cooltext1475347894.png" />
+</image></ImageView><TableView fx:id="tableView" layoutX="90.0" prefHeight="419.0" prefWidth="579.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+  <columns>
+    <TableColumn fx:id="UserName" prefWidth="239.0" text="Ονοματεπώνυμο" />
+    <TableColumn fx:id="Score" minWidth="0.0" prefWidth="126.0" text="Σκορ" /><TableColumn fx:id="Time" prefWidth="109.0" text="Χρόνος" /><TableColumn fx:id="Obstacles" prefWidth="104.0" text="Εμπόδια" />
+  </columns>
+</TableView>
+</children></AnchorPane>

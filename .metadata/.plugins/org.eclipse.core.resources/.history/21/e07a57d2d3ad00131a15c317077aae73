@@ -1,0 +1,69 @@
+package stavrinos.sek.helpers;
+
+public class Row {
+
+	  private String name;
+	  private int score;
+	  private String time;
+	  private int obstacles;
+
+	  /**
+	  * Default constructor.
+	  */
+	  public Row() {
+	  }
+	  
+	  /**
+	  * Constructor with some initial data.
+	  * 
+	  * @param firstName
+	  * @param lastName
+	  */
+	  public Row(String name, String time, String obstacles) {
+	      this.name = name;
+	      this.time = time;
+	      this.obstacles = obstacles;
+	  }
+	  
+	  public String getName() {
+	      return name;
+	  }
+
+	  public void setName(String name) {
+	      this.name = name;
+	  }
+
+	  public String getTime() {
+	      return time;
+	  }
+
+	  public void setTime(String time) {
+	      this.time = time;
+	  }
+
+	  public String getScore() {
+	      return score;
+	  }
+
+	  public void setScore(int street) {
+	      this.score = score;
+	  }
+
+	  public int getPostalCode() {
+	      return postalCode;
+	  }
+
+	  public void setPostalCode(int postalCode) {
+	      this.postalCode = postalCode;
+	  }
+
+	  public String getCity() {
+	      return city;
+	  }
+
+	  public void setCity(String city) {
+	      this.city = city;
+	  }
+
+	
+}

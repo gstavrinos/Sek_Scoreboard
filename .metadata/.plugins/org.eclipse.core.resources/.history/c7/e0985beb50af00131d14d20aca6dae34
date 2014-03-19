@@ -1,0 +1,12 @@
+package stavrinos.sek;
+
+import javafx.fxml.FXML;
+
+public class ScoreCalculator {
+	
+	@FXML
+	public void calculate(){
+		
+	}
+
+}

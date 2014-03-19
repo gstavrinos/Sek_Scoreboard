@@ -1,0 +1,56 @@
+package stavrinos.sek;
+
+import java.io.PrintWriter;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import stavrinos.sek.helpers.Row;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+
+public class Editor implements Initializable {
+	
+	@FXML TextArea text;
+	@FXML Button submit;
+	@FXML Label message;
+		
+	@Override
+    public void initialize(URL url, ResourceBundle rb) {
+    }
+	
+	@FXML
+	public void sendData(){
+		String dataInString = text.getText();
+		try {//TODO controller is accessed, but tableView cannot be populated for some reason!
+			//FXMLLoader fxmlLoader = new FXMLLoader();
+			//fxmlLoader.setLocation(getClass().getResource("mainwindow.fxml"));
+			//fxmlLoader.load(getClass().getResource("mainwindow.fxml").openStream());
+			//Controller c = (Controller) fxmlLoader.getController();		
+			//Controller.data.add(new Row(s[0] + " " + s[1],Integer.parseInt(s[2]),s[3],Integer.parseInt(s[4])));
+			//c.clearData();
+			//Controller.data = Editor.data;
+			//Controller.newdata = true;
+			while ((dataInString = reader.readLine()) != null) {
+    			String[] s = dataInString.split("\\s+");
+    			if(s.length == 5){
+    				data.add(new Row(s[0] + " " + s[1],Integer.parseInt(s[2]),s[3],Integer.parseInt(s[4])));
+    			}	
+    		}
+		   	PrintWriter writer = new PrintWriter("scores.txt", "UTF-8");
+			writer.println(dataInString);
+			writer.close();
+			Controller.available.release();
+			message.setText("Data was added successfully!");
+			//Controller.add(data);
+			//c.add(new Row(s[0] + " " + s[1],Integer.parseInt(s[2]),s[3],Integer.parseInt(s[4])));
+		} 
+		catch (Exception e) {
+			message.setText("Data was added successfully!");
+			e.printStackTrace();
+		}
+	}
+	
+}

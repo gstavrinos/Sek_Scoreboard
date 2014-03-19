@@ -1,0 +1,55 @@
+package stavrinos.sek;
+
+import java.io.PrintWriter;
+import java.net.URL;
+import java.util.ResourceBundle;
+import java.util.Scanner;
+
+import stavrinos.sek.helpers.Row;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
+
+public class Editor implements Initializable {
+	
+	@FXML TextArea text;
+	@FXML Button submit;
+	
+	public static ObservableList<Row> data = FXCollections.observableArrayList();
+	
+	@Override
+    public void initialize(URL url, ResourceBundle rb) {
+    }
+	
+	@FXML
+	public void sendData(){
+		String dataInString = text.getText();
+		Scanner scanner = new Scanner(dataInString);
+		while (scanner.hasNextLine()) {
+		  String line = scanner.nextLine();
+				try {//TODO controller is accessed, but tableView cannot be populated for some reason!
+					//FXMLLoader fxmlLoader = new FXMLLoader();
+					//fxmlLoader.setLocation(getClass().getResource("mainwindow.fxml"));
+			    	//fxmlLoader.load(getClass().getResource("mainwindow.fxml").openStream());
+			    	//Controller c = (Controller) fxmlLoader.getController();		
+					//Controller.data.add(new Row(s[0] + " " + s[1],Integer.parseInt(s[2]),s[3],Integer.parseInt(s[4])));
+			    	//c.clearData();
+					//Controller.data = Editor.data;
+			    	Controller.newdata = true;
+			    	PrintWriter writer = new PrintWriter("scores.txt", "UTF-8");
+			    	writer.println(line);
+			    	writer.close();
+			    	//Controller.add(data);
+			    	//c.add(new Row(s[0] + " " + s[1],Integer.parseInt(s[2]),s[3],Integer.parseInt(s[4])));
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+		}
+		scanner.close();
+	}
+	
+}

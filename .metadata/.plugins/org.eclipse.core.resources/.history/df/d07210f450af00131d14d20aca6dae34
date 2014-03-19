@@ -1,0 +1,18 @@
+package stavrinos.sek;
+
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.TextField;
+
+public class ScoreCalculator implements Initializable {
+
+	@FXML TextField time;
+	@FXML TextField obstacles;
+	@FXML TextField score;
+	
+	@FXML
+	public void calculate(){
+		
+	}
+
+}

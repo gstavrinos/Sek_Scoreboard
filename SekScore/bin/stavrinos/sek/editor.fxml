@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="save" prefHeight="489.0" prefWidth="525.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stavrinos.sek.Editor">
+<children><Button fx:id="submit" alignment="BASELINE_CENTER" layoutX="232.0" layoutY="463.0" mnemonicParsing="false" onAction="#sendData" text="Submit" textAlignment="CENTER" AnchorPane.bottomAnchor="5.0" /><TextArea fx:id="text" prefHeight="461.0" prefWidth="525.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" /><Label fx:id="message" layoutX="245.0" layoutY="439.0" text="" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="10.0" /><Button fx:id="save" blendMode="DIFFERENCE" layoutX="0.2275390625" layoutY="459.0" mnemonicParsing="false" onAction="#saveCopy" text="Save a Copy" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="1.0" /><Button fx:id="calculate" layoutX="426.0" layoutY="436.0" mnemonicParsing="false" onAction="#openCalculator" text="Calculator" AnchorPane.rightAnchor="2.0">
+<effect>
+<ColorAdjust contrast="-0.5" />
+</effect></Button>
+</children></AnchorPane>

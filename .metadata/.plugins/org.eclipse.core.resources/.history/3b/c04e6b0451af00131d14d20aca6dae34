@@ -1,0 +1,21 @@
+package stavrinos.sek;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.TextField;
+
+public class ScoreCalculator {
+
+	@FXML TextField time;
+	@FXML TextField obstacles;
+	@FXML TextField score;
+	
+	@FXML
+	public void calculate(){
+		
+	}
+
+}
