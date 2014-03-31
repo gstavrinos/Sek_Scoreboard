@@ -6,15 +6,17 @@ public class Row {
 	  private int score;
 	  private String time;
 	  private int obstacles;
+	  private String control;
 
 	  
 	  public Row() {
 	  }
-	  public Row(String name, int score, String time, int obstacles) {
+	  public Row(String name, int score, String time, int obstacles, String control) {
 	      this.name = name;
 	      this.time = time;
 	      this.score = score;
 	      this.obstacles = obstacles;
+	      this.control = control;
 	  }
 	  
 	  public String getName() {
@@ -45,8 +47,16 @@ public class Row {
 	      return obstacles;
 	  }
 
-	  public void setPostalCode(int obstacles) {
+	  public void setObstacles(int obstacles) {
 	      this.obstacles = obstacles;
+	  }
+
+	  public String getControl() {
+	      return control;
+	  }
+
+	  public void setControl(String control) {
+	      this.control = control;
 	  }
 
 	

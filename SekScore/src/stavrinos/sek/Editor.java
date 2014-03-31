@@ -26,7 +26,7 @@ public class Editor implements Initializable {
 		
 	@Override
     public void initialize(URL url, ResourceBundle rb) {
-		message.setText("Input Format: Name Surname Score Time(mm:ss:ff) Obstacles");
+		message.setText("Input Format: Name Surname Score Time(mm:ss:msms) Obstacles Control");
     }
 	
 	@FXML
@@ -39,17 +39,22 @@ public class Editor implements Initializable {
 			while (sc.hasNextLine()) {
 				st = sc.nextLine();
     			String[] s = st.split("\\s+");
-    			if(s.length != 5){
+    			if(s.length != 6){
     				error = true;
-    				message.setText("Error on your input! Check that every line consists of 5 items!");
+    				message.setText("Error on your input! Check that every line consists of 6 items!");
     			}	
     		}
 			if(!error){
-				PrintWriter writer = new PrintWriter("scores.txt", "UTF-8");
-		   		writer.println(dataInString);
-				writer.close();
-				Controller.available.release();
-				message.setText("Data was added successfully!");
+				if(!dataInString.equals("")){
+					PrintWriter writer = new PrintWriter("scores.txt", "UTF-8");
+					writer.println(dataInString);
+					writer.close();
+					Controller.available.release();
+					message.setText("Data was added successfully!");
+				}
+				else{    				
+					message.setText("Error on your input! Check that every line consists of 6 items!");
+				}
 			}
 			sc.close();
 		} 

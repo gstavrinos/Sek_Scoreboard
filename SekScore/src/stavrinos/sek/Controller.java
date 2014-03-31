@@ -31,6 +31,7 @@ public class Controller implements Initializable{
     @FXML private TableColumn<Row, Integer> Score;
     @FXML private TableColumn<Row, String> Time;
     @FXML private TableColumn<Row, Integer> Obstacles;
+    @FXML private TableColumn<Row, String> Control;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -39,6 +40,7 @@ public class Controller implements Initializable{
     	Score.setCellValueFactory(new PropertyValueFactory<Row, Integer>("score"));
     	Time.setCellValueFactory(new PropertyValueFactory<Row, String>("time"));
     	Obstacles.setCellValueFactory(new PropertyValueFactory<Row, Integer>("obstacles"));
+    	Control.setCellValueFactory(new PropertyValueFactory<Row, String>("control"));
         Score.setSortType(TableColumn.SortType.DESCENDING);
         tableView.setItems(data);
         new Thread() {
@@ -52,8 +54,8 @@ public class Controller implements Initializable{
                     		String dataInString = null;
                     		while ((dataInString = reader.readLine()) != null) {
                     			String[] s = dataInString.split("\\s+");
-                    			if(s.length == 5){
-                    				data.add(new Row(s[0] + " " + s[1],Integer.parseInt(s[2]),s[3],Integer.parseInt(s[4])));
+                    			if(s.length == 6){
+                    				data.add(new Row(s[0] + " " + s[1],Integer.parseInt(s[2]),s[3],Integer.parseInt(s[4]),s[5]));
                     			}	
                     		}
                     		Platform.runLater(new Runnable() {

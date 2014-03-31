@@ -10,7 +10,7 @@
 </ImageView><TableView fx:id="tableView" layoutX="90.0" prefHeight="419.0" prefWidth="579.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
   <columns>
     <TableColumn fx:id="UserName" prefWidth="239.0" text="Ονοματεπώνυμο" />
-    <TableColumn fx:id="Score" minWidth="0.0" prefWidth="126.0" text="Σκορ" /><TableColumn fx:id="Time" prefWidth="109.0" text="Χρόνος" /><TableColumn fx:id="Obstacles" prefWidth="104.0" text="Εμπόδια" />
+    <TableColumn fx:id="Score" minWidth="0.0" prefWidth="126.0" text="Σκορ" /><TableColumn fx:id="Time" prefWidth="109.0" text="Χρόνος" /><TableColumn fx:id="Obstacles" prefWidth="104.0" text="Εμπόδια" /><TableColumn fx:id="Control" prefWidth="104.0" text="Χειρισμός" />
   </columns>
 </TableView>
 </children></AnchorPane>
